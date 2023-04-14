@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="styleSheet" href="login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="login.js"></script>
+  </head>
+  <body>
+    <div class="account-page d-flex justify-content-center">
+      <div class="container">
+          <div class="row">
+              <div class="col-2">
+                  <img src="images/img1.png" width="100%">
+              </div>
+              <div class="col-2">
+                  <div class="form-container">
+                      <div class="form-btn">
+                          <span onclick="login()">Login</span>
+                          <span onclick="register()">Register</span>
+                      </div>
+                      <form id="Loginform">
+                          <input type="text" placeholder="username">
+                          <input type="password" placeholder="password">
+                          <button type="submit" class="button">login</button>
+                          <a href="">forget password</a>
+                      </form>
+                      <form id="regform">
+                          <input type="text" placeholder="username">
+                          <input type="email" placeholder="Email">
+                          <input type="password" placeholder="password">
+                         
+                          <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                              Register
+                            </button>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">
+                                      <img src="https://res.cloudinary.com/dcox5xgdu/image/upload/v1666344936/20221021_143319_0000-removebg-preview_qpaaox.png" 
+                                      class="website-logo"/>
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    Registered successfully.</br>Verification link send to your e-mail account.
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      </form>
+                  </div>
+          </div>
+      </div>
+  </div>
+  <script>
+    var Loginform = document.getElementById("Loginform");
+    var regform = document.getElementById("regform");
+    var Indicator = document.getElementById("Indicator");  
+      function register(){
+        regform.style.transform = "translateX(0px)";
+        Loginform.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+
+      }
+      function login(){
+        regform.style.transform = "translateX(300px)";
+        Loginform.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+
+
+      }
+
+  </script>
+
+  </body>
+  </html>
